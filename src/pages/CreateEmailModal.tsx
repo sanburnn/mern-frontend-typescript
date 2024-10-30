@@ -23,6 +23,10 @@ const CreateEmailModal: React.FC<CreateEmailModalProps> = ({ isOpen, onClose, re
             await axios.post('http://localhost:4000/api/emails', { 
                 email, date, description 
             });
+            //* Switch ke kode bawa ini kalo ingin send email menggunakan smtp
+            // await axios.post('http://localhost:4000/api/emails/sendemail', { 
+            //     email, date, description 
+            // });
             setEmail('');
             setDate('');
             setDescription('');
